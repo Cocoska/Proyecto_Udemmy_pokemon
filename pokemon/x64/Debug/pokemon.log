@@ -1,0 +1,7 @@
+﻿  pokemon.cpp
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(31,30): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(47,23): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(101,1): error C2504: 'pokeFuego': clase base sin definir
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(109,15): error C3861: 'getAtaque': no se encontró el identificador
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(128,5): error C2059: error de sintaxis: 'if'
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(129,5): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
