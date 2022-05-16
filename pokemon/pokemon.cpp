@@ -7,11 +7,12 @@ using namespace std;
 
 class pokemon
 {
+protected: 
+
     char nombre[15];
     double ataque;
     int salud;
     char color[15];
-    int respiracion;
 
 public:
 
@@ -33,9 +34,6 @@ public:
 
     int getSalud() { return salud; }
     void setSalud(int s) { salud = s; }
-
-    int getRespiracion() { return respiracion; }
-    void setRespiracion(int r) { respiracion = r; }
 
     char* getColor() { return color; }
     void setColor(char col[15]) { strcpy_s(color, col); }
@@ -74,78 +72,52 @@ public:
         cout << "Salud: " << salud << endl;
         cout << "Color: " << color << endl;
     }
-
-    int bajoAgua(bool i)
-    {
-        bool inmune = i;
-        if (inmune = false)
-        {
-            for (int i=0; i < 100; i++)
-            {
-                respiracion++;
-               // delay(1000);
-            }
-            if (respiracion = 0)
-            {
-                salud = 0;
-            }
-        }
-        else
-        {
-            respiracion = 0;
-        }
-    }
 };
 
 
 class pokeAgua : public pokemon
 {
-    char tipo[15];
-    int resp = 0;
-    bool inmune = true;
+    int bonoAgua;
+    int debugAgua;
     
+public: 
+
+    int getBonoAgua() { return bonoAgua; }
+    void setBonoAgua(int bono) { bonoAgua = bono; }
+
+    void aumentoAtaque() { ataque = ataque + (bonoAgua * 0.1); }
+    void disminuirAtaque() { ataque = ataque - (debugAgua * 0.1); }
 };
 
 class pokeFuego : public pokemon
 {
-    char tipo[15];
-    bool modoAtk = false;
-    int temperatura;
+    int bonoFuego;
+    int debugFuego;
+    float espFuego;
 
+public: 
+
+    int getBonoFuego() { return bonoFuego; }
+    void setBonoFuego(int bono) { bonoFuego = bono; }
+
+    void aumentoAtaque() { ataque = ataque + (bonoFuego * 0.1); }
+    void disminuirAtaque() { ataque = ataque - (debugFuego * 0.1); }
 };
 
 class pokeTierra : public pokemon
 {
-    int profundidad;
+    int bonoTierra;
+    int debugTierra;
 
 public:
 
-    void cavar(bool cvr, int dis_bajo)
-    {
-        int head;
-        head = getSalud();
-        if (cvr = true && dis_bajo > profundidad)
-        {
-            head = head - (dis_bajo - profundidad);
-        }
-        setSalud(head);
-    }
+    int getBonoTierra() { return bonoTierra; }
+    void setBonoTierra(int bono) { bonoTierra = bono; }
 
+    void aumentoAtaque() { ataque = ataque + (bonoTierra * 0.1); }
+    void disminuirAtaque() { ataque = ataque - (debugTierra * 0.1); }
 };
 
-class bolaFuego : public pokeFuego
-{
-    int temperatura;
-    int atk;
-    double danoFuego;
-public:
-    void ataqueFuego(int t)
-    {
-        t = temperatura;
-        atk = getAtaque();
-        danoFuego = atk + (t * 0.20);
-    }
-};
 
 
 int main()
