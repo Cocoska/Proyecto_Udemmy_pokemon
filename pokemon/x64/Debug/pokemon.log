@@ -1,7 +1,25 @@
 ﻿  pokemon.cpp
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(31,30): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(47,23): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(101,1): error C2504: 'pokeFuego': clase base sin definir
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(109,15): error C3861: 'getAtaque': no se encontró el identificador
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(128,5): error C2059: error de sintaxis: 'if'
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(129,5): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(32,30): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(45,23): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(133,51): error C2661: 'pokeFuego::pokeFuego': ninguna función sobrecargada acepta 4 argumentos
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(138,73): error C2661: 'pokeTierra::pokeTierra': ninguna función sobrecargada acepta 4 argumentos
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(142,31): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(143,32): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(145,33): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(146,34): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(150,5): error C2039: "cout": no es un miembro de "pokeFuego"
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(92): message : vea la declaración de 'pokeFuego'
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(163,17): error C2059: error de sintaxis: '}'
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(164,17): error C2039: "salud2": no es un miembro de "pokeFuego"
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(92): message : vea la declaración de 'pokeFuego'
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(164,26): error C2039: "salud2": no es un miembro de "pokeFuego"
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(92): message : vea la declaración de 'pokeFuego'
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(164,35): error C2039: "ataque1": no es un miembro de "pokeFuego"
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(92): message : vea la declaración de 'pokeFuego'
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(168,14): error C2039: "pelea": no es un miembro de "pokeFuego"
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(92): message : vea la declaración de 'pokeFuego'
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(171,13): error C2039: "cout": no es un miembro de "pokeFuego"
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(92): message : vea la declaración de 'pokeFuego'
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(171,45): error C2039: "endl": no es un miembro de "pokeFuego"
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(92): message : vea la declaración de 'pokeFuego'
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(173,5): error C2143: error de sintaxis: falta ';' delante de '}'

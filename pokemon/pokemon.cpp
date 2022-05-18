@@ -16,6 +16,14 @@ protected:
 
 public:
 
+    pokemon()
+    {
+        strcpy_s(nombre, "Anonimo");
+        ataque = 1;
+        salud = 1;
+        strcpy_s(color, "SIn color");
+    }
+
     pokemon(char n[15], double a, int s, char c[15])
     {
         strcpy_s(nombre, n);
@@ -82,6 +90,12 @@ class pokeAgua : public pokemon
     
 public: 
 
+    pokeAgua(int ba, int da)
+    {
+        bonoAgua = ba;
+        debugAgua = da;
+    }
+
     int getBonoAgua() { return bonoAgua; }
     void setBonoAgua(int bono) { bonoAgua = bono; }
 
@@ -93,9 +107,25 @@ class pokeFuego : public pokemon
 {
     int bonoFuego;
     int debugFuego;
-    float espFuego;
+    //float espFuego;
 
 public: 
+
+    pokeFuego(int bf, int df): pokemon()
+    {
+        bonoFuego = bf;
+        debugFuego = df;
+    }
+
+    pokeFuego(int bf, int df, char n[15], double a, int s, char c[15])
+    {
+        bonoFuego = bf;
+        debugFuego = df;
+        strcpy_s(nombre, n);
+        ataque = a;
+        salud = s;
+        strcpy_s(color, c);
+    }
 
     int getBonoFuego() { return bonoFuego; }
     void setBonoFuego(int bono) { bonoFuego = bono; }
@@ -111,6 +141,12 @@ class pokeTierra : public pokemon
 
 public:
 
+    pokeTierra(int bt, int dt): pokemon() 
+    {
+        bonoTierra = bt;
+        debugTierra = dt;
+    }
+
     int getBonoTierra() { return bonoTierra; }
     void setBonoTierra(int bono) { bonoTierra = bono; }
 
@@ -123,30 +159,54 @@ public:
 int main()
 {
     char nom_poke[15], col_poke[15], nnom_poke[15], ncol_poke[15], nom_poke2[15], col_poke2[15];
-    strcpy_s(nom_poke, "pikachu");
-    strcpy_s(col_poke, "amarillo");
-    pokemon Pokemon1(nom_poke, 40, 100, col_poke); 
+    int pelea, pociones, turno, ataqueBonus;
+
+    float salud1, salud2, ataque1, ataque2, ataqueBon1, ataqueBon2;
+
+
+    strcpy_s(nom_poke, "Charmander");
+    strcpy_s(col_poke, "Naranja");
+    pokeFuego Pokemon1( 1, 1);
 
     strcpy_s(nom_poke2, "mew");
     strcpy_s(col_poke2, "mewtwo");
 
-    pokemon* Pokemon2 = new pokemon(nom_poke2, 60, 100, col_poke2);
+    pokeTierra* Pokemon2 = new pokeTierra(nom_poke, 50, 100, col_poke, 1, 1);
 
     Pokemon1.datos_pokemon();
 
-    Pokemon1.dano();
+    salud1 = Pokemon1.getSalud();
+    salud2 = Pokemon2->getSalud();
 
-    Pokemon1.datos_pokemon();
+    ataque1 = Pokemon1.getAtaque();
+    ataque2 = Pokemon2->getAtaque();
 
-    Pokemon1.sanar();
+    ataqueBon1=Pokemon1.
 
-    delete Pokemon2;
+    cout<<"Desea pelear: 1. si, 2. no" << endl;
+    cin >> pelea;
 
-    Pokemon1.datos_pokemon();
+    if (pelea == 1)
+    {
+        while (salud1 >= 0 || salud2 >= 0)
+        {
+            if (turno == 1)
+            {
+                cout << "El pokemon " << Pokemon1.getNombre() << " ataca al pokemon " << Pokemon2->getNombre() << endl;
+                if (ataqueBonus == 3)
+                {
+                    salud2=salud2-Pokemon1.
+                }
+                salud2 = salud2 - ataque1;
+            }
+        }
+    }
+    else if (pelea == 2) { return 0; }
+    else 
+    {
+            cout << "opcion no reconocida"<<endl;
+            return '0;'
+    }
 
-    strcpy_s(nnom_poke, "raichu");
-    strcpy_s(ncol_poke, "naranja");
-    Pokemon1.evolucion(nnom_poke, ncol_poke);
 
-    Pokemon1.datos_pokemon();
 }
