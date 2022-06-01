@@ -1,0 +1,24 @@
+Preguntas de esta tarea
+Crea un método polimórfico en cada subclase de pokemons creadas previamente que permitan atacar, cada uno de ellos invocando a funciones difernetes
+
+- Los pokemons de agua invocarán una función que permita lanzar un chorro de agua
+
+- Los pokemons de fuego invocarán una función que permita lanzar una bola de fuego
+
+- Los pokemons de tierra invocarán una función que permita lanzar una roca
+
+//para hacer eso solo se añade a la funciones de tipo de pokemon el nombre de ataque futuro yo jejje.
+
+PD: No te exijo que desarrolles tambien los objetos "chorro de agua", "bola de fuego" ni "roca", simplemente puedes hacer el código que llamaría a esas funciones aunque no las desarrolles. 
+Pero si quieres crear tales objetos con sus constructores y métodos estaría GENIAL. Este tipo de iniciativa en las que das un paso más allá es lo que realmente te hace crecer como 
+programador :)
+
+Crea una función que permita polimorfía en el envío de parámetros recibiendo 2 objetos cualquiera que sean o procedan de la clase pokemon
+
+el primero objeto será el atacante quien enviará un ataque (usando la función creada justo en la pregunta anterior de esta tarea) restandole al nivel de vida del contricante el valor de su 
+potencia de ataque. Si el contricante (objeto enviado como  segundo parámetro de la función) sigue con vida tendrá que ser éste quien ataque de vuelta haciendo que el primer pokemon pierda 
+una cantidad de nivel de vida equivalente a la potencia de ataque de su rival
+// pasar las asigmaciones de salud y ataque directamente a una funcion polimorfica que funciona para cambiar valores de herencia
+Esta secuencia de ataques tiene que darse mientras ambos tengan un nivel de vida superior a 0.
+
+Al final de la función debe publicarse el ganador del enfrentamiento
