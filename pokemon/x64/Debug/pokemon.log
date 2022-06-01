@@ -1,25 +1,14 @@
 ﻿  pokemon.cpp
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(32,30): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(45,23): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(133,51): error C2661: 'pokeFuego::pokeFuego': ninguna función sobrecargada acepta 4 argumentos
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(138,73): error C2661: 'pokeTierra::pokeTierra': ninguna función sobrecargada acepta 4 argumentos
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(142,31): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(143,32): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(145,33): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(146,34): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(150,5): error C2039: "cout": no es un miembro de "pokeFuego"
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(92): message : vea la declaración de 'pokeFuego'
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(163,17): error C2059: error de sintaxis: '}'
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(164,17): error C2039: "salud2": no es un miembro de "pokeFuego"
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(92): message : vea la declaración de 'pokeFuego'
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(164,26): error C2039: "salud2": no es un miembro de "pokeFuego"
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(92): message : vea la declaración de 'pokeFuego'
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(164,35): error C2039: "ataque1": no es un miembro de "pokeFuego"
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(92): message : vea la declaración de 'pokeFuego'
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(168,14): error C2039: "pelea": no es un miembro de "pokeFuego"
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(92): message : vea la declaración de 'pokeFuego'
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(171,13): error C2039: "cout": no es un miembro de "pokeFuego"
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(92): message : vea la declaración de 'pokeFuego'
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(171,45): error C2039: "endl": no es un miembro de "pokeFuego"
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(92): message : vea la declaración de 'pokeFuego'
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(173,5): error C2143: error de sintaxis: falta ';' delante de '}'
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(40,30): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(53,23): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(188,28): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(189,29): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(191,30): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(192,31): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(174,45): warning C4101: 'ataqueBon1': variable local sin referencia
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(171,53): warning C4101: 'ncol_poke': variable local sin referencia
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(174,57): warning C4101: 'ataqueBon2': variable local sin referencia
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(172,37): warning C4101: 'ataqueBonus': variable local sin referencia
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(171,38): warning C4101: 'nnom_poke': variable local sin referencia
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(172,16): warning C4101: 'pociones': variable local sin referencia
+  pokemon.vcxproj -> C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\x64\Debug\pokemon.exe

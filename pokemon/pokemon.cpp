@@ -20,7 +20,7 @@ public:
     {
         strcpy_s(nombre, "Anonimo");
         ataque = 1;
-        salud = 1;
+        salud = 100;
         strcpy_s(color, "SIn color");
     }
 
@@ -147,6 +147,16 @@ public:
         debugTierra = dt;
     }
 
+    pokeTierra(int bt, int dt, char n[15], double a, int s, char c[15])
+    {
+        bonoTierra = bt;
+        debugTierra = dt;
+        strcpy_s(nombre, n);
+        ataque = a;
+        salud = s;
+        strcpy_s(color, c);
+    }
+
     int getBonoTierra() { return bonoTierra; }
     void setBonoTierra(int bono) { bonoTierra = bono; }
 
@@ -159,31 +169,33 @@ public:
 int main()
 {
     char nom_poke[15], col_poke[15], nnom_poke[15], ncol_poke[15], nom_poke2[15], col_poke2[15];
-    int pelea, pociones, turno, ataqueBonus;
+    int pelea, pociones, turno = 0, ataqueBonus;
 
     float salud1, salud2, ataque1, ataque2, ataqueBon1, ataqueBon2;
 
 
     strcpy_s(nom_poke, "Charmander");
     strcpy_s(col_poke, "Naranja");
-    pokeFuego Pokemon1( 1, 1);
+    pokeFuego Poke1( 1, 1, nom_poke, 2, 150, col_poke);
 
     strcpy_s(nom_poke2, "mew");
     strcpy_s(col_poke2, "mewtwo");
 
-    pokeTierra* Pokemon2 = new pokeTierra(nom_poke, 50, 100, col_poke, 1, 1);
+    pokeTierra* Poke2 = new pokeTierra(1, 1, nom_poke2, 3, 170, col_poke2);
 
-    Pokemon1.datos_pokemon();
+    Poke1.datos_pokemon();
 
-    salud1 = Pokemon1.getSalud();
-    salud2 = Pokemon2->getSalud();
+    salud1 = Poke1.getSalud();
+    salud2 = Poke2->getSalud();
 
-    ataque1 = Pokemon1.getAtaque();
-    ataque2 = Pokemon2->getAtaque();
+    ataque1 = Poke1.getAtaque();
+    ataque2 = Poke2->getAtaque();
 
-    ataqueBon1=Pokemon1.
+    Poke2->datos_pokemon();
 
-    cout<<"Desea pelear: 1. si, 2. no" << endl;
+    //ataqueBon1 = Pokemon1.aumentoAtaque;
+
+    cout << "Desea pelear: 1. si, 2. no" << endl;
     cin >> pelea;
 
     if (pelea == 1)
@@ -192,20 +204,35 @@ int main()
         {
             if (turno == 1)
             {
-                cout << "El pokemon " << Pokemon1.getNombre() << " ataca al pokemon " << Pokemon2->getNombre() << endl;
-                if (ataqueBonus == 3)
+                cout << "El pokemon " << Poke1.getNombre() << " ataca al pokemon " << Poke2->getNombre() << endl;
+                /*if (ataqueBonus == 3)
                 {
-                    salud2=salud2-Pokemon1.
-                }
+                    salud2 = salud2 - Poke1.aumentoAtaque();
+                }*/
                 salud2 = salud2 - ataque1;
+                turno = 0;
+                cout << "Salud de " << Poke2->getNombre() << " es: " << salud2 << endl;
+            } 
+            if (turno == 0)
+            {
+                cout << "El pokemon " << Poke2->getNombre() << " ataca al pokemon " << Poke1.getNombre() << endl;
+                    /*if (ataqueBonus == 3)
+                    {
+                        salud2 = salud2 - Poke1.aumentoAtaque();
+                    }*/
+                    salud1 = salud1 - ataque2;
+                    turno = 0;
+                    cout << "Salud de " << Poke1.getNombre() << " es: " << salud1 << endl;
             }
+            if (salud1 == 0) { return 0; }
+            if (salud2 == 0) { return 0; }
         }
     }
     else if (pelea == 2) { return 0; }
     else 
     {
             cout << "opcion no reconocida"<<endl;
-            return '0;'
+            return 0;
     }
 
 
