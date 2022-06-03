@@ -87,13 +87,26 @@ class pokeAgua : public pokemon
 {
     int bonoAgua;
     int debugAgua;
+    char nombreAtaque[20];
     
 public: 
 
-    pokeAgua(int ba, int da)
+    pokeAgua(int ba, int da): pokemon()
     {
         bonoAgua = ba;
         debugAgua = da;
+        strcpy_s(nombreAtaque, "Chorro de agua");
+    }
+
+    pokeAgua(int bf, int df, char n[15], double a, int s, char c[15])
+    {
+        bonoAgua = bf;
+        debugAgua = df;
+        strcpy_s(nombre, n);
+        ataque = a;
+        salud = s;
+        strcpy_s(color, c);
+        strcpy_s(nombreAtaque, "Chorro de agua");
     }
 
     int getBonoAgua() { return bonoAgua; }
@@ -101,6 +114,9 @@ public:
 
     void aumentoAtaque() { ataque = ataque + (bonoAgua * 0.1); }
     void disminuirAtaque() { ataque = ataque - (debugAgua * 0.1); }
+
+    char* getNombreAtaque() { return nombreAtaque; }
+    void setName(char n[20]) { strcpy_s(nombreAtaque, n); }
 };
 
 class pokeFuego : public pokemon
@@ -108,6 +124,7 @@ class pokeFuego : public pokemon
     int bonoFuego;
     int debugFuego;
     //float espFuego;
+    char nombreAtaque[20];
 
 public: 
 
@@ -115,6 +132,7 @@ public:
     {
         bonoFuego = bf;
         debugFuego = df;
+        strcpy_s(nombreAtaque, "bola de fuego");
     }
 
     pokeFuego(int bf, int df, char n[15], double a, int s, char c[15])
@@ -125,6 +143,7 @@ public:
         ataque = a;
         salud = s;
         strcpy_s(color, c);
+        strcpy_s(nombreAtaque, "bola de fuego");
     }
 
     int getBonoFuego() { return bonoFuego; }
@@ -132,12 +151,16 @@ public:
 
     void aumentoAtaque() { ataque = ataque + (bonoFuego * 0.1); }
     void disminuirAtaque() { ataque = ataque - (debugFuego * 0.1); }
+
+    char* getNombreAtaque() { return nombreAtaque; }
+    void setName(char n[20]) { strcpy_s(nombreAtaque, n); }
 };
 
 class pokeTierra : public pokemon
 {
     int bonoTierra;
     int debugTierra;
+    char nombreAtaque[20];
 
 public:
 
@@ -145,6 +168,7 @@ public:
     {
         bonoTierra = bt;
         debugTierra = dt;
+        strcpy_s(nombreAtaque, "Lanza roca");
     }
 
     pokeTierra(int bt, int dt, char n[15], double a, int s, char c[15])
@@ -155,6 +179,7 @@ public:
         ataque = a;
         salud = s;
         strcpy_s(color, c);
+        strcpy_s(nombreAtaque, "Lanza roca");
     }
 
     int getBonoTierra() { return bonoTierra; }
@@ -162,9 +187,19 @@ public:
 
     void aumentoAtaque() { ataque = ataque + (bonoTierra * 0.1); }
     void disminuirAtaque() { ataque = ataque - (debugTierra * 0.1); }
+
+    char* getNombreAtaque() { return nombreAtaque; }
+    void setName(char n[20]) { strcpy_s(nombreAtaque, n); }
 };
 
-
+void funcionAtaque(pokemon* p) 
+{
+    //double ataque;
+    //int salud;
+    //ataque = p2.getAtaque();
+    //salud = p.getSalud();
+    p.setSalud(100);
+}
 
 int main()
 {
@@ -179,19 +214,21 @@ int main()
     pokeFuego Poke1( 1, 1, nom_poke, 2, 150, col_poke);
 
     strcpy_s(nom_poke2, "mew");
-    strcpy_s(col_poke2, "mewtwo");
+    strcpy_s(col_poke2, "Rosa");
 
-    pokeTierra* Poke2 = new pokeTierra(1, 1, nom_poke2, 3, 170, col_poke2);
+    pokeTierra Poke2(1, 1, nom_poke2, 3, 170, col_poke2);
 
     Poke1.datos_pokemon();
 
+    pokeAgua* poke3 = new pokeAgua(1, 1, nom_poke2, 3, 170, col_poke2);
+
     salud1 = Poke1.getSalud();
-    salud2 = Poke2->getSalud();
+    salud2 = Poke2.getSalud();
 
     ataque1 = Poke1.getAtaque();
-    ataque2 = Poke2->getAtaque();
+    ataque2 = Poke2.getAtaque();
 
-    Poke2->datos_pokemon();
+    Poke2.datos_pokemon();
 
     //ataqueBon1 = Pokemon1.aumentoAtaque;
 
@@ -204,29 +241,36 @@ int main()
         {
             if (turno == 1)
             {
-                cout << "El pokemon " << Poke1.getNombre() << " ataca al pokemon " << Poke2->getNombre() << endl;
+                cout << "El pokemon " << Poke1.getNombre() << " ataca al pokemon " << Poke2.getNombre() <<" con ataque: "<< Poke1.getNombreAtaque() << "." << endl;
                 /*if (ataqueBonus == 3)
                 {
                     salud2 = salud2 - Poke1.aumentoAtaque();
                 }*/
-                salud2 = salud2 - ataque1;
+                //salud2 = salud2 - ataque1;
+                //funcionAtaque(&Poke2, &Poke1);
                 turno = 0;
-                cout << "Salud de " << Poke2->getNombre() << " es: " << salud2 << endl;
-            } 
+                cout << "Salud de " << Poke2.getNombre() << " es: " << Poke2.getSalud() << endl;
+            }
+            cout << turno << endl;
             if (turno == 0)
             {
-                cout << "El pokemon " << Poke2->getNombre() << " ataca al pokemon " << Poke1.getNombre() << endl;
+                cout << "El pokemon " << Poke2.getNombre() << " ataca al pokemon " << Poke1.getNombre()<<"con ataque: " << Poke2.getNombreAtaque() << "." << endl;
                     /*if (ataqueBonus == 3)
                     {
                         salud2 = salud2 - Poke1.aumentoAtaque();
                     }*/
-                    salud1 = salud1 - ataque2;
-                    turno = 0;
-                    cout << "Salud de " << Poke1.getNombre() << " es: " << salud1 << endl;
+                    //salud1 = salud1 - ataque2;
+                    //funcionAtaque(&Poke1, &Poke2);
+                    turno = 1;
+                    cout << "Salud de " << Poke1.getNombre() << " es: " << Poke1.getSalud() << endl;
             }
             if (salud1 == 0) { return 0; }
             if (salud2 == 0) { return 0; }
+            cout << turno << endl;
         }
+        if (salud1 == 0) { cout << "El ganador del combate es: " << Poke2.getNombre() << endl; }
+        else 
+        if (salud2 == 0) { cout << "El ganador del combate es: " << Poke1.getNombre() << endl; }
     }
     else if (pelea == 2) { return 0; }
     else 
