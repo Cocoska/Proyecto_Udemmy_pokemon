@@ -1,10 +1,9 @@
 ﻿  pokemon.cpp
 C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(40,30): warning C4244: 'return': conversión de 'double' a 'int'; posible pérdida de datos
 C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(53,23): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(199,17): error C2228: el operando izquierdo de '.getAtaque' debe tener class/struct/union
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(199,17): message : el tipo es 'pokemon *'
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(199,17): message : ¿deseaba utilizar '->' en su lugar?
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(223,28): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(224,28): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(226,30): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(227,30): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(200,25): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(206,53): warning C4101: 'ncol_poke': variable local sin referencia
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(207,37): warning C4101: 'ataqueBonus': variable local sin referencia
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(206,38): warning C4101: 'nnom_poke': variable local sin referencia
+C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\pokemon\pokemon.cpp(207,16): warning C4101: 'pociones': variable local sin referencia
+  pokemon.vcxproj -> C:\Users\jcmc1\Documents\Udemy\OOP C++\pokemon\x64\Debug\pokemon.exe

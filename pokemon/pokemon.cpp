@@ -192,85 +192,63 @@ public:
     void setName(char n[20]) { strcpy_s(nombreAtaque, n); }
 };
 
-void funcionAtaque(pokemon* p) 
+void funcionAtaque(pokemon& p, pokemon& p2)
 {
-    //double ataque;
-    //int salud;
-    //ataque = p2.getAtaque();
-    //salud = p.getSalud();
-    p.setSalud(100);
+    double ataque;
+    int salud;
+    ataque = p2.getAtaque();
+    salud = p.getSalud()-ataque;
+    p.setSalud(salud);
 }
 
 int main()
 {
     char nom_poke[15], col_poke[15], nnom_poke[15], ncol_poke[15], nom_poke2[15], col_poke2[15];
-    int pelea, pociones, turno = 0, ataqueBonus;
-
-    float salud1, salud2, ataque1, ataque2, ataqueBon1, ataqueBon2;
+    int pelea, pociones, turno = 0, ataqueBonus, estado = 0;
 
 
     strcpy_s(nom_poke, "Charmander");
     strcpy_s(col_poke, "Naranja");
-    pokeFuego Poke1( 1, 1, nom_poke, 2, 150, col_poke);
+    pokeFuego Poke1( 1, 1, nom_poke, 10, 180, col_poke);
 
     strcpy_s(nom_poke2, "mew");
     strcpy_s(col_poke2, "Rosa");
 
-    pokeTierra Poke2(1, 1, nom_poke2, 3, 170, col_poke2);
+    pokeTierra Poke2(1, 1, nom_poke2, 10, 170, col_poke2);
 
     Poke1.datos_pokemon();
 
     pokeAgua* poke3 = new pokeAgua(1, 1, nom_poke2, 3, 170, col_poke2);
 
-    salud1 = Poke1.getSalud();
-    salud2 = Poke2.getSalud();
-
-    ataque1 = Poke1.getAtaque();
-    ataque2 = Poke2.getAtaque();
-
     Poke2.datos_pokemon();
-
-    //ataqueBon1 = Pokemon1.aumentoAtaque;
 
     cout << "Desea pelear: 1. si, 2. no" << endl;
     cin >> pelea;
 
     if (pelea == 1)
     {
-        while (salud1 >= 0 || salud2 >= 0)
+        while (estado != 1)
         {
-            if (turno == 1)
+            if (turno == 1 && Poke1.getSalud() != 0)
             {
-                cout << "El pokemon " << Poke1.getNombre() << " ataca al pokemon " << Poke2.getNombre() <<" con ataque: "<< Poke1.getNombreAtaque() << "." << endl;
-                /*if (ataqueBonus == 3)
-                {
-                    salud2 = salud2 - Poke1.aumentoAtaque();
-                }*/
-                //salud2 = salud2 - ataque1;
-                //funcionAtaque(&Poke2, &Poke1);
+                cout << "El pokemon " << Poke1.getNombre() << " ataca al pokemon " << Poke2.getNombre() << " con ataque: " << Poke1.getNombreAtaque() << "." << endl;
+                funcionAtaque(Poke2, Poke1);
                 turno = 0;
                 cout << "Salud de " << Poke2.getNombre() << " es: " << Poke2.getSalud() << endl;
+                if (Poke2.getSalud() <= 0) { estado = 1; }
             }
-            cout << turno << endl;
-            if (turno == 0)
+            if (turno == 0 && Poke2.getSalud() != 0)
             {
                 cout << "El pokemon " << Poke2.getNombre() << " ataca al pokemon " << Poke1.getNombre()<<"con ataque: " << Poke2.getNombreAtaque() << "." << endl;
-                    /*if (ataqueBonus == 3)
-                    {
-                        salud2 = salud2 - Poke1.aumentoAtaque();
-                    }*/
-                    //salud1 = salud1 - ataque2;
-                    //funcionAtaque(&Poke1, &Poke2);
+                    funcionAtaque(Poke1, Poke2);
                     turno = 1;
                     cout << "Salud de " << Poke1.getNombre() << " es: " << Poke1.getSalud() << endl;
+                    if (Poke1.getSalud() <= 0) { estado = 1; }
             }
-            if (salud1 == 0) { return 0; }
-            if (salud2 == 0) { return 0; }
-            cout << turno << endl;
-        }
-        if (salud1 == 0) { cout << "El ganador del combate es: " << Poke2.getNombre() << endl; }
+        if (Poke1.getSalud() <= 0) { cout << "El ganador del combate es: " << Poke2.getNombre() << endl; }
         else 
-        if (salud2 == 0) { cout << "El ganador del combate es: " << Poke1.getNombre() << endl; }
+        if (Poke2.getSalud() <= 0) { cout << "El ganador del combate es: " << Poke1.getNombre() << endl; }
+        }
     }
     else if (pelea == 2) { return 0; }
     else 
